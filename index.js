@@ -27,6 +27,10 @@ mongoose
 
 app.use(express.urlencoded({ extended: true }));
 
+app.get("/api", (req, res) => {
+	res.send("Welcome to Blue Amazona backend!");
+});
+
 app.get("/api/keys/paypal", (req, res) => {
 	res.send(process.env.PAYPAL_CLIENT_ID || "sb");
 });
